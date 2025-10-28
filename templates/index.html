@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎧 ZEN DOWNLOADER - Personal Audio Extractor</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated background gradients -->
+    <div class="backdrop"></div>
+    <div class="backdrop overlay"></div>
+    
+    <!-- Main container -->
+    <main class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="title">ZEN DOWNLOADER</h1>
+            <p class="subtitle">Personal Audio Extractor</p>
+        </header>
+
+        <!-- Main form -->
+        <section class="form-section">
+            <div class="form-container">
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="video-url" 
+                        placeholder="Paste YouTube URL here..."
+                        autocomplete="off"
+                        spellcheck="false"
+                    />
+                    <button id="submit-btn" type="button">
+                        <span class="btn-text">EXTRACT VIBE</span>
+                        <div class="btn-loader" id="btn-loader">
+                            <div class="loader-dot"></div>
+                            <div class="loader-dot"></div>
+                            <div class="loader-dot"></div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Status and result section -->
+        <section class="status-section">
+            <div id="status" class="status-text"></div>
+            <div id="result" class="result-container"></div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p class="note">For personal use only.</p>
+            <div class="tech-info">
+                <span>Powered by yt-dlp & ffmpeg</span>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Particle effects (optional) -->
+    <div id="particles" class="particles"></div>
+
+    <!-- JavaScript -->
+    <script src="/static/app.js"></script>
+</body>
+</html>
